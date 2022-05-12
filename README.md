@@ -40,7 +40,30 @@ Markdoc is open-source—check out its [source](http://github.com/markdoc/markdo
 
 ```ts
 import content from './contents/doc.md'
+// import { $$mdtype, name, attributes, children } from './contents/doc.md'
 import Markdoc from '@markdoc/markdoc'
 
 const html = Markdoc.renderers.html(content)
 ```
+
+## Configuration
+
+The plugin accepts a [`Markdoc.transform`(https://markdoc.io/docs/syntax#config) config:
+
+```ts
+// vite.config.ts
+import { defineConfig } from 'vite'
+import markdoc from 'vite-plugin-markdoc'
+
+export default defineConfig({
+  plugins: [markdoc({
+    nodes: {...},
+    tags: {...},
+    ...
+  })]
+});
+```
+
+## License
+
+MIT
