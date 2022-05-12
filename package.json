@@ -10,6 +10,13 @@
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
+  "keywords": [
+    "vite",
+    "frontmatter",
+    "markdown",
+    "react",
+    "vue"
+  ],
   "exports": {
     "require": "./dist/index.js",
     "import": "./dist/index.mjs"
