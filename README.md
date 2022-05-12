@@ -64,6 +64,18 @@ export default defineConfig({
 });
 ```
 
+## TypeScript Shum
+
+```ts
+declare module "*.md" {
+  import type { RenderableTreeNode } from '@markdoc/markdoc'
+  const Node: RenderableTreeNode
+  export default Node
+}
+```
+
+Save as `vite.d.ts` for instance.
+
 ## License
 
 MIT
