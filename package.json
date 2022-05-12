@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-markdoc",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "packageManager": "pnpm@7.0.0",
   "description": "Markdoc plugin for Vite",
   "publishConfig": {
