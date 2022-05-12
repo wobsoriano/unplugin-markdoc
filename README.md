@@ -37,3 +37,10 @@ Markdoc is a Markdown-based syntax and toolchain for creating custom documentati
 Markdoc is open-source—check out its [source](http://github.com/markdoc/markdoc) to see how it works.
 {% /callout %}
 ```
+
+```ts
+import content from './contents/doc.md'
+import Markdoc from '@markdoc/markdoc'
+
+const html = Markdoc.renderers.html(content)
+```
