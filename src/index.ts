@@ -6,7 +6,7 @@ type Options = Parameters<typeof Markdoc.transform>['1']
 
 const mdExtRE = /\.(md)$/i
 
-export default function plugin(options?: Options): Plugin {
+export default function (options?: Options): Plugin {
   return {
     name: 'vite-plugin-markdoc',
     enforce: 'pre',
