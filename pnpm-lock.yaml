@@ -2,16 +2,24 @@ lockfileVersion: 5.4
 
 specifiers:
   '@antfu/eslint-config': ^0.23.0
+  '@markdoc/markdoc': ^0.1.1
+  '@rollup/pluginutils': ^4.2.1
   eslint: ^8.15.0
   tsup: 5.11.13
   typescript: 4.5.4
+  vite: ^2.9.9
   vitest: 0.2.5
+
+dependencies:
+  '@markdoc/markdoc': 0.1.1
 
 devDependencies:
   '@antfu/eslint-config': 0.23.0_gvlnzj7fcypfemxddb7m5xtmju
+  '@rollup/pluginutils': 4.2.1
   eslint: 8.15.0
   tsup: 5.11.13_typescript@4.5.4
   typescript: 4.5.4
+  vite: 2.9.9
   vitest: 0.2.5
 
 packages:
@@ -170,6 +178,11 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
 
+  /@markdoc/markdoc/0.1.1:
+    resolution: {integrity: sha512-ak7lacwM9fY99U+b9+IQ02qkcdc8Of0OPIWUdWNHW8zdmWam0fNRYoKWVR1B5OvdWDauYN3u0+ZbR9cds3oChw==}
+    engines: {node: '>=14.7.0'}
+    dev: false
+
   /@nodelib/fs.scandir/2.1.5:
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
     engines: {node: '>= 8'}
@@ -189,6 +202,14 @@ packages:
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.13.0
+    dev: true
+
+  /@rollup/pluginutils/4.2.1:
+    resolution: {integrity: sha512-iKnFXr7NkdZAIHiIWE+BX5ULi/ucVFYWD6TbAV+rZctiRTY2PL6tsIKhoIOaoskiWAkgu+VsbXgUVDNLHf+InQ==}
+    engines: {node: '>= 8.0.0'}
+    dependencies:
+      estree-walker: 2.0.2
+      picomatch: 2.3.1
     dev: true
 
   /@types/chai-subset/1.3.3:
@@ -1362,6 +1383,10 @@ packages:
   /estraverse/5.3.0:
     resolution: {integrity: sha512-MMdARuVEQziNTeJD8DgMqmhwR11BRQ/cBP+pLtYdSTnf3MIO8fFeiINEbX36ZdNlfU/7A9f3gUw49B3oQsvwBA==}
     engines: {node: '>=4.0'}
+    dev: true
+
+  /estree-walker/2.0.2:
+    resolution: {integrity: sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==}
     dev: true
 
   /esutils/2.0.3:
