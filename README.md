@@ -64,7 +64,7 @@ export default defineConfig({
 });
 ```
 
-## TypeScript Shum
+## TypeScript Shim
 
 ```ts
 declare module "*.md" {
