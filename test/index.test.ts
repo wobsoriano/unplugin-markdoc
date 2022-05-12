@@ -2,7 +2,7 @@ import { expect, test } from 'vitest'
 import MarkdocLoader from '../src'
 import path from 'path'
 
-test('Correct markdown to json transformation', async () => {
+test('Correct markdown to tree-shakable ES Module imports', async () => {
   // @ts-expect-error: Fix later
   const result = MarkdocLoader().transform!('', path.join(__dirname, 'content.md'))
   // @ts-expect-error: Fix later
