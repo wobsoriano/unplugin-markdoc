@@ -23,7 +23,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "prepublishOnly": "pnpm run build",
-    "release": "bumpp --commit --push --tag && pnpm run publish"
+    "release": "bumpp --commit --push --tag && pnpm publish"
   },
   "dependencies": {
     "@markdoc/markdoc": "^0.1.1"
