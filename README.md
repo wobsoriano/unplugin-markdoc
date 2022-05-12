@@ -48,7 +48,7 @@ const html = Markdoc.renderers.html(content)
 
 ## Configuration
 
-The plugin accepts a [`Markdoc.transform`(https://markdoc.io/docs/syntax#config) config:
+The plugin accepts a [`Markdoc.transform`](https://markdoc.io/docs/syntax#config) config:
 
 ```ts
 // vite.config.ts
