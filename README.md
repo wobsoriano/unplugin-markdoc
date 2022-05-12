@@ -40,7 +40,6 @@ Markdoc is open-source—check out its [source](http://github.com/markdoc/markdo
 
 ```ts
 import content from './contents/doc.md'
-// import { $$mdtype, name, attributes, children } from './contents/doc.md'
 import Markdoc from '@markdoc/markdoc'
 
 const html = Markdoc.renderers.html(content)
