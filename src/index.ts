@@ -2,9 +2,11 @@ import type { Plugin } from 'vite'
 import { dataToEsm } from '@rollup/pluginutils'
 import Markdoc from '@markdoc/markdoc'
 
+type Options = Parameters<typeof Markdoc.transform>['1']
+
 const mdExtRE = /\.(md)$/i
 
-export default function plugin(): Plugin {
+export default function plugin(options?: Options): Plugin {
   return {
     name: 'vite-plugin-markdoc',
     enforce: 'pre',
@@ -13,7 +15,7 @@ export default function plugin(): Plugin {
         return null
 
       const ast = Markdoc.parse(code)
-      const content = Markdoc.transform(ast)
+      const content = Markdoc.transform(ast, options)
 
       return {
         code: dataToEsm(content, {
