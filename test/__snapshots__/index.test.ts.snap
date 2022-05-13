@@ -1,0 +1,22 @@
+// Vitest Snapshot v1
+
+exports[`Correct markdown to tree-shakable ES Module imports 1`] = `
+{
+  "code": "export const $$mdtype = \\"Tag\\";
+export const name = \\"article\\";
+export const attributes = {
+};
+export const children = [
+];
+export default {
+	$$mdtype: $$mdtype,
+	name: name,
+	attributes: attributes,
+	children: children
+};
+",
+  "map": {
+    "mappings": "",
+  },
+}
+`;
