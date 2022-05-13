@@ -2,7 +2,7 @@ import type { Plugin } from 'vite'
 import { dataToEsm } from '@rollup/pluginutils'
 import Markdoc from '@markdoc/markdoc'
 
-type Options = Parameters<typeof Markdoc.transform>['1']
+export type Options = Parameters<typeof Markdoc.transform>['1']
 
 const mdExtRE = /\.(md)$/i
 
