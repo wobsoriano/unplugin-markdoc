@@ -1,150 +1,136 @@
 // Vitest Snapshot v1
 
 exports[`Correct markdown to tree-shakable ES Module imports 1`] = `
-"export const $$mdtype = \\"Tag\\";
-export const name = \\"article\\";
-export const attributes = {
-};
-export const children = [
-	{
-		$$mdtype: \\"Tag\\",
-		name: \\"h1\\",
-		attributes: {
-			id: \\"overview\\"
-		},
-		children: [
-			undefined,
-			\\" \\"
-		]
-	},
-	{
-		$$mdtype: \\"Tag\\",
-		name: \\"p\\",
-		attributes: {
-		},
-		children: [
-			\\"Markdoc is a Markdown-based syntax and toolchain for creating custom documentation sites. Stripe created Markdoc to power \\",
-			{
-				$$mdtype: \\"Tag\\",
-				name: \\"a\\",
-				attributes: {
-					href: \\"http://stripe.com/docs\\"
-				},
-				children: [
-					\\"our public docs\\"
-				]
-			},
-			\\".\\"
-		]
-	},
-	{
-		$$mdtype: \\"Tag\\",
-		name: \\"p\\",
-		attributes: {
-		},
-		children: [
-			\\"Markdoc is open-source—check out its \\",
-			{
-				$$mdtype: \\"Tag\\",
-				name: \\"a\\",
-				attributes: {
-					href: \\"http://github.com/markdoc/markdoc\\"
-				},
-				children: [
-					\\"source\\"
-				]
-			},
-			\\" to see how it works.\\"
-		]
-	},
-	{
-		$$mdtype: \\"Tag\\",
-		name: \\"h2\\",
-		attributes: {
-		},
-		children: [
-			\\"How is Markdoc different?\\"
-		]
-	},
-	{
-		$$mdtype: \\"Tag\\",
-		name: \\"p\\",
-		attributes: {
-		},
-		children: [
-			\\"Markdoc uses a fully declarative approach to composition and flow control, where other solutions… \\",
-			{
-				$$mdtype: \\"Tag\\",
-				name: \\"a\\",
-				attributes: {
-					href: \\"/docs/overview\\"
-				},
-				children: [
-					\\"Read more\\"
-				]
-			},
-			\\".\\"
-		]
-	},
-	{
-		$$mdtype: \\"Tag\\",
-		name: \\"h2\\",
-		attributes: {
-		},
-		children: [
-			\\"Next steps\\"
-		]
-	},
-	{
-		$$mdtype: \\"Tag\\",
-		name: \\"ul\\",
-		attributes: {
-		},
-		children: [
-			{
-				$$mdtype: \\"Tag\\",
-				name: \\"li\\",
-				attributes: {
-				},
-				children: [
-					{
-						$$mdtype: \\"Tag\\",
-						name: \\"a\\",
-						attributes: {
-							href: \\"/docs/getting-started\\"
-						},
-						children: [
-							\\"Install Markdoc\\"
-						]
-					}
-				]
-			},
-			{
-				$$mdtype: \\"Tag\\",
-				name: \\"li\\",
-				attributes: {
-				},
-				children: [
-					{
-						$$mdtype: \\"Tag\\",
-						name: \\"a\\",
-						attributes: {
-							href: \\"/docs/syntax\\"
-						},
-						children: [
-							\\"Explore the syntax\\"
-						]
-					}
-				]
-			}
-		]
-	}
-];
-export default {
-	$$mdtype: $$mdtype,
-	name: name,
-	attributes: attributes,
-	children: children
-};
-"
+Tag {
+  "$$mdtype": "Tag",
+  "attributes": {},
+  "children": [
+    Tag {
+      "$$mdtype": "Tag",
+      "attributes": {
+        "id": "overview",
+      },
+      "children": [
+        undefined,
+        " ",
+      ],
+      "name": "h1",
+    },
+    Tag {
+      "$$mdtype": "Tag",
+      "attributes": {},
+      "children": [
+        "Markdoc is a Markdown-based syntax and toolchain for creating custom documentation sites. Stripe created Markdoc to power ",
+        Tag {
+          "$$mdtype": "Tag",
+          "attributes": {
+            "href": "http://stripe.com/docs",
+          },
+          "children": [
+            "our public docs",
+          ],
+          "name": "a",
+        },
+        ".",
+      ],
+      "name": "p",
+    },
+    Tag {
+      "$$mdtype": "Tag",
+      "attributes": {},
+      "children": [
+        "Markdoc is open-source—check out its ",
+        Tag {
+          "$$mdtype": "Tag",
+          "attributes": {
+            "href": "http://github.com/markdoc/markdoc",
+          },
+          "children": [
+            "source",
+          ],
+          "name": "a",
+        },
+        " to see how it works.",
+      ],
+      "name": "p",
+    },
+    Tag {
+      "$$mdtype": "Tag",
+      "attributes": {},
+      "children": [
+        "How is Markdoc different?",
+      ],
+      "name": "h2",
+    },
+    Tag {
+      "$$mdtype": "Tag",
+      "attributes": {},
+      "children": [
+        "Markdoc uses a fully declarative approach to composition and flow control, where other solutions… ",
+        Tag {
+          "$$mdtype": "Tag",
+          "attributes": {
+            "href": "/docs/overview",
+          },
+          "children": [
+            "Read more",
+          ],
+          "name": "a",
+        },
+        ".",
+      ],
+      "name": "p",
+    },
+    Tag {
+      "$$mdtype": "Tag",
+      "attributes": {},
+      "children": [
+        "Next steps",
+      ],
+      "name": "h2",
+    },
+    Tag {
+      "$$mdtype": "Tag",
+      "attributes": {},
+      "children": [
+        Tag {
+          "$$mdtype": "Tag",
+          "attributes": {},
+          "children": [
+            Tag {
+              "$$mdtype": "Tag",
+              "attributes": {
+                "href": "/docs/getting-started",
+              },
+              "children": [
+                "Install Markdoc",
+              ],
+              "name": "a",
+            },
+          ],
+          "name": "li",
+        },
+        Tag {
+          "$$mdtype": "Tag",
+          "attributes": {},
+          "children": [
+            Tag {
+              "$$mdtype": "Tag",
+              "attributes": {
+                "href": "/docs/syntax",
+              },
+              "children": [
+                "Explore the syntax",
+              ],
+              "name": "a",
+            },
+          ],
+          "name": "li",
+        },
+      ],
+      "name": "ul",
+    },
+  ],
+  "name": "article",
+}
 `;

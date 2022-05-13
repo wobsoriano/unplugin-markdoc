@@ -6,14 +6,11 @@ export type Options = Parameters<typeof Markdoc.transform>['1']
 
 const mdExtRE = /\.(md)$/i
 
-export function composeImportableTreeNodes(code: string, options?: Options) {
+export function transformMarkdown(code: string, options?: Options) {
   const ast = Markdoc.parse(code)
   const content = Markdoc.transform(ast, options)
 
-  return dataToEsm(content, {
-    preferConst: true,
-    namedExports: true,
-  })
+  return content
 }
 
 export default function (options?: Options): Plugin {
@@ -24,8 +21,13 @@ export default function (options?: Options): Plugin {
       if (!mdExtRE.test(id))
         return null
 
+      const esm = transformMarkdown(code, options)
+
       return {
-        code: composeImportableTreeNodes(code, options),
+        code: dataToEsm(esm, {
+          preferConst: true,
+          namedExports: true,
+        }),
         map: { mappings: '' },
       }
     },
