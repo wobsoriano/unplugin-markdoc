@@ -6,6 +6,16 @@ type Options = Parameters<typeof Markdoc.transform>['1']
 
 const mdExtRE = /\.(md)$/i
 
+export function composeImportableTreeNodes(code: string, options?: Options) {
+  const ast = Markdoc.parse(code)
+  const content = Markdoc.transform(ast, options)
+
+  return dataToEsm(content, {
+    preferConst: true,
+    namedExports: true,
+  })
+}
+
 export default function (options?: Options): Plugin {
   return {
     name: 'vite-plugin-markdoc',
@@ -14,14 +24,8 @@ export default function (options?: Options): Plugin {
       if (!mdExtRE.test(id))
         return null
 
-      const ast = Markdoc.parse(code)
-      const content = Markdoc.transform(ast, options)
-
       return {
-        code: dataToEsm(content, {
-          preferConst: true,
-          namedExports: true,
-        }),
+        code: composeImportableTreeNodes(code, options),
         map: { mappings: '' },
       }
     },

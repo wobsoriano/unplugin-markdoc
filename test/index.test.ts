@@ -1,9 +1,9 @@
-import path from 'path'
+import { readFile } from 'fs/promises'
 import { expect, test } from 'vitest'
-import MarkdocLoader from '../src'
+import { composeImportableTreeNodes } from '../src'
 
-test('Correct markdown to tree-shakable ES Module imports', () => {
-  // @ts-expect-error: Fix later
-  const result = MarkdocLoader().transform!('', path.join(__dirname, 'content.md'))
+test('Correct markdown to tree-shakable ES Module imports', async () => {
+  const content = await readFile('test/content.md', 'utf-8')
+  const result = composeImportableTreeNodes(content)
   expect(result).toMatchSnapshot()
 })
