@@ -1,6 +1,6 @@
 {
   "name": "unplugin-markdoc",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "packageManager": "pnpm@7.16.1",
   "description": "Markdoc plugin for  Vite and Webpack",
   "publishConfig": {
