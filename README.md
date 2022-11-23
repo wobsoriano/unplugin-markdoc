@@ -122,11 +122,19 @@ Markdoc is open-source—check out its [source](http://github.com/markdoc/markdo
 {% /callout %}
 ```
 
-```ts
+Example with Vue
+
+```html
+<script>
 import Markdoc from '@markdoc/markdoc'
 import content from './contents/doc.md'
 
 const html = Markdoc.renderers.html(content)
+</script>
+
+<template>
+  <MyComponent :html="html" />
+</template>
 ```
 
 ## Configuration
