@@ -8,7 +8,7 @@
 ## Install
 
 ```bash
-pnpm add unplugin-markdoc
+pnpm add @markdoc/markdoc unplugin-markdoc
 ```
 
 <details>
