@@ -1,52 +1,107 @@
 {
-  "name": "vite-plugin-markdoc",
-  "version": "0.1.4",
-  "packageManager": "pnpm@7.0.0",
-  "description": "Markdoc plugin for Vite",
+  "name": "unplugin-markdoc",
+  "version": "0.2.0",
+  "packageManager": "pnpm@7.16.1",
+  "description": "Markdoc plugin for  Vite and Webpack",
   "publishConfig": {
     "access": "public"
   },
   "license": "MIT",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
   "keywords": [
     "vite",
+    "webpack",
+    "rollup",
+    "nuxt",
+    "esbuild",
     "frontmatter",
     "markdown",
     "react",
     "vue"
   ],
   "exports": {
-    "require": "./dist/index.js",
-    "import": "./dist/index.mjs"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    },
+    "./vite": {
+      "types": "./dist/vite.d.ts",
+      "require": "./dist/vite.cjs",
+      "import": "./dist/vite.js"
+    },
+    "./webpack": {
+      "types": "./dist/webpack.d.ts",
+      "require": "./dist/webpack.cjs",
+      "import": "./dist/webpack.js"
+    },
+    "./rollup": {
+      "types": "./dist/rollup.d.ts",
+      "require": "./dist/rollup.cjs",
+      "import": "./dist/rollup.js"
+    },
+    "./esbuild": {
+      "types": "./dist/esbuild.d.ts",
+      "require": "./dist/esbuild.cjs",
+      "import": "./dist/esbuild.js"
+    },
+    "./nuxt": {
+      "types": "./dist/nuxt.d.ts",
+      "require": "./dist/nuxt.cjs",
+      "import": "./dist/nuxt.js"
+    },
+    "./types": {
+      "types": "./dist/types.d.ts",
+      "require": "./dist/types.cjs",
+      "import": "./dist/types.js"
+    },
+    "./*": "./*"
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./*"
+      ]
+    }
   },
   "files": [
     "dist"
   ],
   "scripts": {
-    "build-fast": "tsup src/index.ts --format cjs,esm",
-    "build": "pnpm run build-fast --dts-resolve --minify",
+    "build": "tsup",
+    "dev": "tsup --watch src",
+    "build:fix": "esno scripts/postbuild.ts",
     "lint": "eslint .",
-    "test": "vitest run",
-    "lint:fix": "eslint . --fix",
-    "prepublishOnly": "nr build",
-    "release": "bumpp --commit --push --tag && npm publish"
+    "play": "pnpm -C playground run dev",
+    "prepublishOnly": "pnpm run build",
+    "release": "bumpp && pnpm publish",
+    "start": "esno src/index.ts",
+    "test": "vitest"
+  },
+  "peerDependencies": {
+    "@markdoc/markdoc": ">=0.2.0"
   },
   "dependencies": {
-    "@markdoc/markdoc": "^0.1.1",
-    "@rollup/pluginutils": "^4.2.1",
-    "vite": "^2.9.9"
+    "unplugin": "^1.0.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.23.0",
-    "@antfu/ni": "^0.16.2",
-    "bumpp": "^7.1.1",
-    "eslint": "^8.15.0",
-    "pnpm": "^7.1.0",
-    "tsup": "^5.12.7",
+    "@antfu/eslint-config": "^0.31.0",
+    "@markdoc/markdoc": "^0.2.1",
+    "@rollup/pluginutils": "^5.0.2",
+    "bumpp": "^8.2.1",
+    "chalk": "^5.1.2",
+    "eslint": "^8.28.0",
+    "esno": "^0.16.3",
+    "fast-glob": "^3.2.12",
+    "rollup": "^3.4.0",
+    "tsup": "^6.5.0",
     "typescript": "4.6.4",
-    "vitest": "^0.12.4"
+    "vite": "^3.2.4",
+    "vitest": "^0.25.2",
+    "webpack": "^5.75.0"
   },
   "eslintConfig": {
     "extends": "@antfu"
