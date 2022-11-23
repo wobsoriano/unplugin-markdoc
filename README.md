@@ -1,7 +1,7 @@
-# vite-plugin-markdoc
+# unplugin-markdoc
 
-[![Build Size](https://img.shields.io/bundlephobia/minzip/vite-plugin-markdoc?label=bundle%20size&style=flat&colorA=000000&colorB=000000)](https://bundlephobia.com/result?p=vite-plugin-markdoc)
-[![Version](https://img.shields.io/npm/v/vite-plugin-markdoc?style=flat&colorA=000000&colorB=000000)](https://www.npmjs.com/package/vite-plugin-markdoc)
+[![Build Size](https://img.shields.io/bundlephobia/minzip/unplugin-markdoc?label=bundle%20size&style=flat&colorA=000000&colorB=000000)](https://bundlephobia.com/result?p=unplugin-markdoc)
+[![Version](https://img.shields.io/npm/v/unplugin-markdoc?style=flat&colorA=000000&colorB=000000)](https://www.npmjs.com/package/unplugin-markdoc)
 
 [Markdoc](https://markdoc.io/) plugin for Vite/Webpack projects.
 
@@ -108,6 +108,8 @@ build({
 
 <br></details>
 
+## Usage
+
 ```md
 ---
 title: What is Markdoc?
@@ -135,11 +137,10 @@ The plugin accepts an optional [`Markdoc.transform`](https://markdoc.io/docs/syn
 
 ```ts
 // vite.config.ts
-import { defineConfig } from 'vite'
-import markdoc from 'vite-plugin-markdoc'
+import MarkdocPlugin from 'unplugin-markdoc/vite'
 
 export default defineConfig({
-  plugins: [markdoc({
+  plugins: [MarkdocPlugin({
     nodes: {...},
     tags: {...},
     ...
@@ -157,7 +158,7 @@ declare module '*.md' {
 }
 ```
 
-Save as `vite.d.ts` for instance.
+Save as `markdoc.d.ts` for instance.
 
 ## License
 
