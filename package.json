@@ -2,11 +2,16 @@
   "name": "unplugin-markdoc",
   "version": "0.2.3",
   "packageManager": "pnpm@7.21.0",
-  "description": "Markdoc plugin for  Vite and Webpack",
+  "description": "Markdoc plugin for Vite and Webpack",
+  "license": "MIT",
+  "homepage": "https://github.com/wobsoriano/unplugin-markdoc#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wobsoriano/unplugin-markdoc.git"
+  },
   "publishConfig": {
     "access": "public"
   },
-  "license": "MIT",
   "keywords": [
     "vite",
     "webpack",
