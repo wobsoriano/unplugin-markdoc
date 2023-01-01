@@ -13,15 +13,9 @@
     "access": "public"
   },
   "keywords": [
-    "vite",
-    "webpack",
-    "rollup",
-    "nuxt",
-    "esbuild",
+    "vue",
     "frontmatter",
-    "markdown",
-    "react",
-    "vue"
+    "markdown"
   ],
   "exports": {
     ".": {
