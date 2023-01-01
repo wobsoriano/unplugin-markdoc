@@ -29,4 +29,7 @@ export default createUnplugin<Options | undefined>(options => ({
       map: { mappings: '' },
     }
   },
+  transformInclude(id) {
+    return mdExtRE.test(id)
+  },
 }))
