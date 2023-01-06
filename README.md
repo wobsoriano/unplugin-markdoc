@@ -139,7 +139,7 @@ or to render a html directly...
 ```vue
 <script setup>
 import Markdoc from '@markdoc/markdoc'
-import content from './contents/doc.md?html'
+import html from './contents/doc.md?html'
 </script>
 
 <template>
