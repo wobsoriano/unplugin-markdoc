@@ -1,14 +1,11 @@
 # unplugin-markdoc
 
-[![Build Size](https://img.shields.io/bundlephobia/minzip/unplugin-markdoc?label=bundle%20size&style=flat&colorA=000000&colorB=000000)](https://bundlephobia.com/result?p=unplugin-markdoc)
-[![Version](https://img.shields.io/npm/v/unplugin-markdoc?style=flat&colorA=000000&colorB=000000)](https://www.npmjs.com/package/unplugin-markdoc)
-
 [Markdoc](https://markdoc.io/) plugin for Vite/Webpack projects.
 
 ## Install
 
 ```bash
-pnpm add @markdoc/markdoc unplugin-markdoc
+npm install @markdoc/markdoc unplugin-markdoc
 ```
 
 <details>
@@ -147,11 +144,10 @@ import MarkdocPlugin from 'unplugin-markdoc/vite'
 
 export default defineConfig({
   plugins: [MarkdocPlugin({
-    nodes: {...},
-    tags: {...},
-    ...
+    nodes: {},
+    tags: {},
   })]
-});
+})
 ```
 
 ## TypeScript Shim
@@ -161,6 +157,11 @@ declare module '*.md' {
   import type { RenderableTreeNode } from '@markdoc/markdoc'
   const Node: RenderableTreeNode
   export default Node
+}
+
+declare module '*.md?html' {
+  const html: string
+  export default html
 }
 ```
 

@@ -3,7 +3,7 @@ import { dataToEsm } from '@rollup/pluginutils'
 import Markdoc from '@markdoc/markdoc'
 import type { Options } from './types'
 
-const mdExtRE = /\.(md)$/i
+const mdExtRE = /\.(md|md\?html)$/i
 
 export function transformMarkdown(code: string, options?: Options) {
   const ast = Markdoc.parse(code)
@@ -19,14 +19,23 @@ export default createUnplugin<Options | undefined>(options => ({
     if (!mdExtRE.test(id))
       return null
 
-    const esm = transformMarkdown(code, options)
+    const treeNode = transformMarkdown(code, options)
+
+    const format = id.split('?')[1]
+    if (format === 'html') {
+      return {
+        code: dataToEsm(Markdoc.renderers.html(treeNode), {
+          preferConst: true,
+          namedExports: false,
+        }),
+      }
+    }
 
     return {
-      code: dataToEsm(esm, {
+      code: dataToEsm(treeNode, {
         preferConst: true,
-        namedExports: true,
+        namedExports: false,
       }),
-      map: { mappings: '' },
     }
   },
   transformInclude(id) {
