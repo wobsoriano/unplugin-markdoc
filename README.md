@@ -121,8 +121,8 @@ Markdoc is open-source—check out its [source](http://github.com/markdoc/markdo
 
 Example with Vue
 
-```html
-<script>
+```vue
+<script setup>
 import Markdoc from '@markdoc/markdoc'
 import content from './contents/doc.md'
 
@@ -130,7 +130,20 @@ const html = Markdoc.renderers.html(content)
 </script>
 
 <template>
-  <MyComponent :html="html" />
+  <div v-html="html" />
+</template>
+```
+
+or to render a html directly...
+
+```vue
+<script setup>
+import Markdoc from '@markdoc/markdoc'
+import content from './contents/doc.md?html'
+</script>
+
+<template>
+  <div v-html="html" />
 </template>
 ```
 
