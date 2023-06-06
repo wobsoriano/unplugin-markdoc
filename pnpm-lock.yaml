@@ -1,4 +1,8 @@
-lockfileVersion: '6.0'
+lockfileVersion: '6.1'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
 
 dependencies:
   '@rollup/pluginutils':
@@ -13,8 +17,8 @@ devDependencies:
     specifier: ^0.38.6
     version: 0.38.6(eslint@8.40.0)(typescript@5.0.4)
   '@markdoc/markdoc':
-    specifier: ^0.2.2
-    version: 0.2.2
+    specifier: ^0.3.0
+    version: 0.3.0
   '@vitejs/plugin-vue':
     specifier: ^4.2.1
     version: 4.2.1(vite@4.3.5)(vue@3.2.47)
@@ -540,8 +544,8 @@ packages:
       type-detect: 4.0.8
     dev: true
 
-  /@markdoc/markdoc@0.2.2:
-    resolution: {integrity: sha512-0TiD9jmA5h5znN4lxo7HECAu3WieU5g5vUsfByeucrdR/x88hEilpt16EydFyJwJddQ/3w5HQgW7Ovy62r4cyw==}
+  /@markdoc/markdoc@0.3.0:
+    resolution: {integrity: sha512-QWCF8krIIw52ulflfnoff0yG1eKl9CCGA3KAiOjHyYtHNzSEouFh8lO52nAaO3qV2Ctj1GTB8TTb2rTfvISQfA==}
     engines: {node: '>=14.7.0'}
     peerDependencies:
       '@types/react': '*'
