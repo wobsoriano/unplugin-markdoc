@@ -1,4 +1,4 @@
-import { readFile } from 'fs/promises'
+import { readFile } from 'node:fs/promises'
 import { expect, test } from 'vitest'
 import { transformMarkdown } from '../src'
 
