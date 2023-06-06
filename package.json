@@ -1,7 +1,7 @@
 {
   "name": "unplugin-markdoc",
   "version": "0.3.1",
-  "packageManager": "pnpm@8.5.0",
+  "packageManager": "pnpm@8.6.1",
   "description": "Markdoc plugin for Vite and Webpack",
   "license": "MIT",
   "homepage": "https://github.com/wobsoriano/unplugin-markdoc#readme",
@@ -90,22 +90,22 @@
     "unplugin": "^1.3.1"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.38.6",
+    "@antfu/eslint-config": "^0.39.5",
     "@markdoc/markdoc": "^0.3.0",
-    "@vitejs/plugin-vue": "^4.2.1",
-    "bumpp": "^9.1.0",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "bumpp": "^9.1.1",
     "chalk": "^5.2.0",
-    "concurrently": "^8.0.1",
-    "eslint": "^8.40.0",
+    "concurrently": "^8.1.0",
+    "eslint": "^8.42.0",
     "fast-glob": "^3.2.12",
-    "rollup": "^3.21.6",
+    "rollup": "^3.23.1",
     "tsup": "^6.7.0",
     "tsx": "^3.12.7",
-    "typescript": "5.0.4",
-    "vite": "^4.3.5",
-    "vitest": "^0.31.0",
-    "vue": "^3.2.47",
-    "webpack": "^5.82.1"
+    "typescript": "5.1.3",
+    "vite": "^4.3.9",
+    "vitest": "^0.31.4",
+    "vue": "^3.3.4",
+    "webpack": "^5.85.1"
   },
   "eslintConfig": {
     "extends": "@antfu"
